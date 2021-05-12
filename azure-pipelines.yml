@@ -40,7 +40,7 @@ steps:
   displayName: 'Publish npm artifact'
 - task: Bash@3
   displayName: 'Linux Agent folder structure'
-  condition: false 
+  condition: eq('${Agent.OS}}', Linux)
   inputs:
     targetType: 'inline'
     script: |
@@ -59,6 +59,7 @@ steps:
       
 - task: PowerShell@2
   displayName: 'Windows Agent folder structure'
+  condition: eq('${Agent.OS}}', Windows_NT)
   inputs:
     targetType: 'inline'
     script: |
