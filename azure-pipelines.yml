@@ -63,8 +63,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      echo '######### -pwd- ######### '
       pwd
-      echo "######### ls $(Pipeline.Workspace.) #########"
       ls $(Pipeline.Workspace)
     
