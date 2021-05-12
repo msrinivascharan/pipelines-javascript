@@ -44,15 +44,15 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      echo '######### pwd ######### \n'
+      echo '######### pwd ######### '
       pwd
-      echo '######### ls $(Pipeline.Workspace) ######### \n'
+      echo '######### ls $(Pipeline.Workspace) ######### '
       ls $(Pipeline.Workspace)
-      echo '######### ls $(Pipeline.Workspace)/a ######### \n'
+      echo '######### ls $(Pipeline.Workspace)/a ######### '
       ls $(Pipeline.Workspace)/a
-      echo '######### ls $(Pipeline.Workspace)/b ######### \n'
+      echo '######### ls $(Pipeline.Workspace)/b ######### '
       ls $(Pipeline.Workspace)/b
-      echo '######### ls $(Pipeline.Workspace)/s ######### \n'
+      echo '######### ls $(Pipeline.Workspace)/s ######### '
       ls $(Pipeline.Workspace)/s
       
     
