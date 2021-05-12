@@ -48,11 +48,12 @@ steps:
       pwd
       echo '######### ls $(Pipeline.Workspace) ######### '
       ls $(Pipeline.Workspace)
-      echo '######### ls $(Pipeline.Workspace)/a ######### '
-      ls $(Pipeline.Workspace)/a
-      echo '######### ls $(Pipeline.Workspace)/b ######### '
-      ls $(Pipeline.Workspace)/b
       echo '######### ls $(Pipeline.Workspace)/s ######### '
       ls $(Pipeline.Workspace)/s
+      echo '######### ls $(Pipeline.Workspace)/b ######### '
+      ls $(Pipeline.Workspace)/b
+      echo '######### ls $(Pipeline.Workspace)/a ######### '
+      ls $(Pipeline.Workspace)/a
+      
       
     
