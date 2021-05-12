@@ -43,7 +43,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
       echo '######### pwd ######### '
       pwd
       echo '######### ls $(Pipeline.Workspace) ######### '
@@ -51,7 +50,9 @@ steps:
       echo '######### ls $(Pipeline.Workspace)/s ######### '
       ls $(Pipeline.Workspace)/s
       echo '######### ls $(Pipeline.Workspace)/b ######### '
-      ls $(Pipeline.Workspace)/b
+      ls $(Pipeline.Workspace)/s
+      echo '######### ls $(Pipeline.Workspace)/TestResults ######### '
+      ls $(Pipeline.Workspace)/TestResults
       echo '######### ls $(Pipeline.Workspace)/a ######### '
       ls $(Pipeline.Workspace)/a
       
