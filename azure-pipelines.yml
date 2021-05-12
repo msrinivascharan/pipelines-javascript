@@ -39,14 +39,20 @@ steps:
     artifactName: npm
   displayName: 'Publish npm artifact'
 - task: Bash@3
+  displayName: 'Agent folder structure'
   inputs:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
-      echo 'Agent folder structure'
-      echo 'ls $(Pipeline.Workspace)'
-      ls $(Pipeline.Workspace)
-      echo 'pwd'
+      echo '######### pwd ######### \n'
       pwd
+      echo '######### ls $(Pipeline.Workspace) ######### \n'
+      ls $(Pipeline.Workspace)
+      echo '######### ls $(Pipeline.Workspace)/a ######### \n'
+      ls $(Pipeline.Workspace)/a
+      echo '######### ls $(Pipeline.Workspace)/b ######### \n'
+      ls $(Pipeline.Workspace)/b
+      echo '######### ls $(Pipeline.Workspace)/s ######### \n'
+      ls $(Pipeline.Workspace)/s
+      
     
