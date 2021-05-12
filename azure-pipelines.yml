@@ -39,7 +39,8 @@ steps:
     artifactName: npm
   displayName: 'Publish npm artifact'
 - task: Bash@3
-  displayName: 'Agent folder structure'
+  displayName: 'Linux Agent folder structure'
+  condition: false 
   inputs:
     targetType: 'inline'
     script: |
@@ -56,5 +57,12 @@ steps:
       echo '######### ls $(Pipeline.Workspace)/a ######### '
       ls $(Pipeline.Workspace)/a
       
-      
+- task: PowerShell@2
+  displayName: 'Windows Agent folder structure'
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo '######### pwd ######### '
+      pwd
+      echo $env:Agent.OS
     
