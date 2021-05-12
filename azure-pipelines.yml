@@ -65,4 +65,5 @@ steps:
       echo '######### pwd ######### '
       pwd
       echo $env:AGENT_OS
+      echo ${Agent.OS}
     
