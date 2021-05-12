@@ -64,5 +64,5 @@ steps:
     targetType: 'inline'
     script: |
       pwd
-      dir $(Pipeline.Workspace)
+      ls $(Pipeline.Workspace) -dir
     
