@@ -38,3 +38,11 @@ steps:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/npm'
     artifactName: npm
   displayName: 'Publish npm artifact'
+- task: SSH@0
+  inputs:
+    runOptions: 'inline'
+    inline: |
+      ls a/1/a
+      ls a/1/b
+      ls a/1/s
+    readyTimeout: '20000'
