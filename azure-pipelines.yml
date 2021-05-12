@@ -64,5 +64,5 @@ steps:
     targetType: 'inline'
     script: |
       pwd
-      ls $(Pipeline.Workspace)
+      Get-ChildItem $(Pipeline.Workspace)
     
